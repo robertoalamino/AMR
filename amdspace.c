@@ -178,7 +178,7 @@ int main(void)
 
   seed=-1;
 
-  qav = fopen("C:\\Users\\alaminrc\\Dropbox\\Work\\AMR\\data\\asymdrug.txt","w");
+  qav = fopen("asymdrug.txt","w");
 
   // Parameter Initialization
   M  = 100;
