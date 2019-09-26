@@ -184,8 +184,8 @@ int main(void)
 
   seed=-1;
 
-  population = fopen("C:\\Users\\alaminrc\\Dropbox\\Work\\AMR\\data\\population.txt","w");
-  qav        = fopen("C:\\Users\\alaminrc\\Dropbox\\Work\\AMR\\data\\qav.txt","w");
+  population = fopen("population.txt","w");
+  qav        = fopen("qav.txt","w");
 
   // Parameter Initialization
   M  = 1000;
