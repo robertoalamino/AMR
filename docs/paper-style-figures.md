@@ -86,3 +86,42 @@ After rendering, inspect the labels, contour map, curve colours, overlaid
 profiles and excluded counts. If a plotting error occurs, retain the exact
 message and do not commit partial figure outputs. Generated figures remain
 under ignored `build/` until reviewed for inclusion in documentation.
+
+## Rendered Figures
+
+These figures were generated from the released result tables using
+`scripts/render-paper-figures.sh`. They show historical baseline and corrected
+reruns, rather than exact reproductions of the published figures.
+
+### Antimicrobial Parameter Sweep
+
+![Corrected sweep](figures/paper/corrected-sweep.png)
+
+![Historical baseline sweep](figures/paper/historical-sweep.png)
+
+Colours interpolate the recorded 11 × 11 parameter grid. Contours are spaced
+at intervals of 0.02 in mean final susceptibility. Interpolation adds no
+simulation observations.
+
+### Mean Reversal Trajectories
+
+![Corrected reversal means](figures/paper/corrected-reversal-means.png)
+
+![Historical baseline reversal means](figures/paper/historical-reversal-means.png)
+
+Means include carried observations from extinct realisations. Those values
+represent the last observed susceptibility, not measurements of living populations.
+
+### Corrected Reversal Distributions
+
+![Corrected distributions over the paper display range](figures/paper/corrected-reversal-distributions-paper-range.png)
+
+Blue profiles show the last treated step; beige profiles show the final step.
+Heights represent fractions of all 1000 realisations per bin of width 0.01,
+including carried observations. Connected, shaded profiles follow the paper’s
+visual convention; they are not fitted probability densities.
+
+The restricted view reports observations outside its displayed range.
+Fractions are not renormalised after restricting the display.
+
+![Corrected distributions over the full probability range](figures/paper/corrected-reversal-distributions-full.png)
