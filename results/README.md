@@ -74,6 +74,16 @@ One seed per setting does not establish robustness across seeds. Different
 implementations consume random streams differently, so matching seeds do
 not create paired realisations.
 
-Figure rendering and paper-style plotting scripts are the next preparation
-stage. This data bundle does not yet claim a completed one-command figure
-workflow or container verification.
+Paper-style figures can be regenerated without rerunning simulations:
+
+```bash
+bash scripts/render-paper-figures.sh
+```
+
+This generates PNG and SVG outputs under `build/paper-figures/`. All six
+native Windows PNGs and representative Docker/Linux PNG layouts were visually
+inspected. Released-result checks passed in both environments. SVG generation
+succeeded, but equivalent visual inspection remains pending.
+See [figure definitions and gallery](../docs/paper-style-figures.md) and
+[native and Docker instructions](../docs/reproducibility.md). These checks do
+not remove the full-output and archived-evidence limitations described above.

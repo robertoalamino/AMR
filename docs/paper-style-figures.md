@@ -20,10 +20,10 @@ versions of six figures. It records the renderer version and figure hashes.
 It does not rerun any simulations or modify numerical result tables.
 
 Requirements are Bash, AWK, standard GNU utilities and Gnuplot with pngcairo
-and SVG support. The scripts target Gnuplot 5.4 or newer; actual renderer
-compatibility must be confirmed on the release platforms. There is no Python
-dependency. Generic serif fonts allow platform substitution; pixel-identical
-text rendering is not promised.
+and SVG support. Rendering was exercised with Gnuplot 6.0.4 on Windows and Gnuplot 5.4.4
+in the Debian Docker environment. There is no Python dependency. The scripts
+request Liberation Serif, included in Docker; install it for native rendering
+to avoid substitution. Pixel-identical rendering is not promised.
 
 ## Figures and scientific definitions
 
@@ -76,16 +76,18 @@ does not fabricate corresponding historical distribution panels.
 
 ## Verification status
 
-Bash syntax, source-data integrity, grid ordering and all plotted numeric
-ranges were checked during preparation. Gnuplot was unavailable in the
-preparation environment, so actual Gnuplot execution and visual inspection
-remain pending on the user's Windows installation and later in the release
-container. Successful file creation alone is not visual verification.
+Source-data integrity, grid ordering and plotted numeric ranges were checked.
+All six native Windows paper-style PNGs were visually inspected. Representative
+Docker/Linux PNGs covering the sweep, mean-trajectory and distribution layouts
+were visually inspected after configuring UTF-8 and Liberation Serif. Corrected,
+historical and released-result checks passed in Docker.
 
-After rendering, inspect the labels, contour map, curve colours, overlaid
-profiles and excluded counts. If a plotting error occurs, retain the exact
-message and do not commit partial figure outputs. Generated figures remain
-under ignored `build/` until reviewed for inclusion in documentation.
+PNG and SVG generation succeeded; SVGs have not received equivalent visual
+inspection. Successful file creation alone is not visual verification.
+After plotting or dependency changes, inspect affected labels, contours,
+curves, profiles and excluded counts. Generated outputs remain under ignored
+`build/` until reviewed. The gallery contains reviewed native Windows exports,
+not byte-for-byte reference images for Docker rendering.
 
 ## Rendered Figures
 
