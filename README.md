@@ -5,9 +5,9 @@ model for the emergence of anti-microbial resistance*, Journal of
 Theoretical Biology 486, 110080.
 https://doi.org/10.1016/j.jtbi.2019.110080
 
-**Release candidate, stage 1.** The scientific implementations are frozen
-for release preparation. Numerical figure inputs, paper-style plots,
-container verification and licensing review are not yet complete.
+**Release candidate, stage 2: numerical data.** The scientific implementations are frozen
+for release preparation. Compact figure inputs and data checks are included.
+Paper-style plots, container verification and licensing review remain pending.
 Do not describe this candidate as a finished reproducibility release.
 
 ## Build and check
@@ -21,6 +21,7 @@ From the repository root:
 ```bash
 bash scripts/check-all.sh
 bash scripts/check-historical.sh
+bash scripts/check-released-results.sh
 ```
 
 The first command builds and tests the corrected implementation. It checks
@@ -29,7 +30,8 @@ structure and repeatability, extinction handling, summaries, snapshots,
 histograms and parent selection. It does not compare corrected trajectories
 to the historical references. The second command builds the isolated
 historical baseline and compares it with the saved short references, normalising only CRLF/LF
-line endings.
+line endings. The third command verifies the compact released result data
+and regenerates their snapshot histograms and sweep summary.
 
 ## Programs
 

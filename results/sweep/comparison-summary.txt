@@ -1,0 +1,4 @@
+Mean difference across grid: -0.000742620
+Mean absolute difference: 0.001203645
+Largest absolute difference: 0.005804000 at alpha=-1.000000, beta=0.600000 (signed -0.005804000)
+Corrected q higher: 30; lower: 90; equal at printed precision: 1

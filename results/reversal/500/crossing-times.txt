@@ -1,0 +1,22 @@
+Treatment interval: [5000, 5500)
+Final step: 15000
+Each implementation uses its own treatment-associated amplitude.
+Times are first crossings; crossing-time uncertainty is not estimated.
+
+Historical: means including carried values
+Onset mean: 0.288447011; last-treated mean: 0.186018154
+50% of treatment-associated change:
+  Acquisition crossing: 68 steps since onset
+  Recovery crossing: 1135 steps since withdrawal
+90% of treatment-associated change:
+  Acquisition crossing: 327 steps since onset
+  Recovery crossing: not reached within observation window
+
+Corrected: means including carried values
+Onset mean: 0.288537442; last-treated mean: 0.174393972
+50% of treatment-associated change:
+  Acquisition crossing: 82 steps since onset
+  Recovery crossing: 641 steps since withdrawal
+90% of treatment-associated change:
+  Acquisition crossing: 335 steps since onset
+  Recovery crossing: 4973 steps since withdrawal

@@ -9,3 +9,5 @@
 *.sha256 text eol=lf
 historical/src/** whitespace=-blank-at-eol
 tests/reference/**/*.txt whitespace=-blank-at-eol
+*.tsv text eol=lf
+results/**/*.txt text eol=lf

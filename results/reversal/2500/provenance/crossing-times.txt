@@ -1,0 +1,7 @@
+Analysis commit: 22fd4f9506938ab7cb503997d81a9c0c3a1764a6
+Settings: start=5000 end=7500 steps=15000 realisations=1000
+Input means: corrected-summary.tsv column historical_style_mean; historical-mean.tsv column mean_q.
+Source hashes and raw-output identities below record the original analysis inputs.
+original crossing-time script SHA256: 55951fd80ff5d3c6ea1f57bddb90bf50cf71f33e45f445d973f7508d2f70a4ff
+historical raw qav.txt SHA256: 92b296056fe798885a6b90cdc91d0cf83d7f8e156422d107c95e6a94ad093f77
+corrected raw qav.txt SHA256: 63e5f95a0f77283ecbefce17acb31e678aebc6ec51ba70a2507da9defd24f069

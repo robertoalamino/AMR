@@ -1,0 +1,17 @@
+Version: corrected
+Program: sweep
+Build status: success
+Started UTC: 2026-11-04T09:33:55Z
+Finished UTC: 2026-11-04T13:42:03Z
+Exit status: 0
+Simulation arguments: --steps 3000 --realisations 100 --seed 1
+Build flags: -std=c99 -Wall -Wextra -Wpedantic -O2; link -lm
+Recorded source revision: d07f38fa719fee688f93bfa9f77091a9ce44d6f5
+Source revision scope: Original research revision identifier; may not be reachable in the public release history.
+Public source: src
+Checksums scope: original-output.sha256 records the original full outputs; only a subset is included here.
+Compiler:
+gcc.exe (Rev4, Built by MSYS2 project) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

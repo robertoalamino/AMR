@@ -1,0 +1,41 @@
+Final q including carried values
+  Historical: 0.268760631 (n=1000)
+  Corrected:  0.276451680 (n=1000)
+  Corrected minus historical: 0.007691049
+  Approximate 95% interval: [0.000807302, 0.014574796]
+
+Final q among final recorded survivors
+  Historical: 0.268979780 (n=824)
+  Corrected:  0.276081058 (n=982)
+  Corrected minus historical: 0.007101278
+  Approximate 95% interval: [-0.000545528, 0.014748083]
+
+Zero final recorded population
+  Historical: 176/1000 = 17.60%
+  Corrected:  18/1000 = 1.80%
+  Difference: -15.80 percentage points
+  Approximate 95% interval: [-18.37, -13.34] percentage points
+
+Final q >= 0.27, all realisations
+  Historical: 680/1000 = 68.00%
+  Corrected:  781/1000 = 78.10%
+  Difference: 10.10 percentage points
+  Approximate 95% interval: [6.22, 13.94] percentage points
+
+Final q <= 0.1, all realisations
+  Historical: 59/1000 = 5.90%
+  Corrected:  58/1000 = 5.80%
+  Difference: -0.10 percentage points
+  Approximate 95% interval: [-2.18, 1.98] percentage points
+
+Final q >= 0.27, survivors
+  Historical: 583/824 = 70.75%
+  Corrected:  763/982 = 77.70%
+  Difference: 6.95 percentage points
+  Approximate 95% interval: [2.90, 11.00] percentage points
+
+Final q <= 0.1, survivors
+  Historical: 59/824 = 7.16%
+  Corrected:  58/982 = 5.91%
+  Difference: -1.25 percentage points
+  Approximate 95% interval: [-3.62, 1.03] percentage points

@@ -1,0 +1,17 @@
+Version: corrected
+Program: reversal
+Build status: success
+Started UTC: 2026-10-30T07:03:12Z
+Finished UTC: 2026-10-30T09:51:59Z
+Exit status: 0
+Simulation arguments: --steps 15000 --realisations 1000 --start 5000 --end 5500 --seed 1
+Build flags: -std=c99 -Wall -Wextra -Wpedantic -O2; link -lm
+Recorded source revision: 37fa00ae9d5cd688686edd29005dc54126a47705
+Source revision scope: Original research revision identifier; may not be reachable in the public release history.
+Public source: src
+Checksums scope: original-output.sha256 records the original full outputs; only a subset is included here.
+Compiler:
+gcc.exe (Rev4, Built by MSYS2 project) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

@@ -38,8 +38,11 @@ with Git Bash and MSYS2. Container and plotting verification are pending.
 
 ## Figure reproduction
 
-Existing PNGs can be viewed, but the compact numerical figure inputs have
-not yet been imported into this candidate. The release will provide those
-inputs and one-command generation with Gnuplot. No private files are
+Existing PNGs can be viewed, and compact numerical figure inputs are now
+included under `results/`. Run `bash scripts/check-released-results.sh` to
+verify them and regenerate histograms and the sweep summary. Full reversal
+trajectories are not included, so trajectory summaries and historical
+final-outcome reports are not independently reconstructed by this command.
+A one-command Gnuplot figure workflow remains to be added. No private files are
 required by the code or test workflow. The public archived-data evidence
 extract and the full-result archive must be completed before release.
