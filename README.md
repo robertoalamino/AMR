@@ -5,17 +5,33 @@ model for the emergence of anti-microbial resistance*, Journal of
 Theoretical Biology 486, 110080.
 https://doi.org/10.1016/j.jtbi.2019.110080
 
-**Release candidate, stage 3: paper-style plotting.** The scientific implementations are frozen
-for release preparation. Compact figure inputs and data checks are included.
-Paper-style plotting scripts are included; rendering verification, container
-verification and licensing review remain pending.
-Do not describe this candidate as a finished reproducibility release.
+**Release candidate.** The scientific implementations are frozen for release
+preparation. Compact result data, checks and paper-style plots are included.
+Native Windows and Linux checks and Docker/Linux checks have passed, and
+representative rendered PNGs have been visually inspected. Licensing and
+remaining archival release work are not yet complete.
+
+## Choose a reproduction route
+
+- **Native:** install the compiler and command-line tools yourself, then run
+  the scripts below. Docker is not required.
+- **Docker:** build the supplied environment and run the same scripts inside
+  it. Docker must be installed and its engine running.
+
+Both routes use the public code and included data; no private workbooks or
+external research folders are needed. See the
+[setup and reproduction instructions](docs/reproducibility.md).
+
+Viewing the committed figures needs no software installation. Regenerating
+figures from included tables does not rerun simulations. Full production
+experiments can take hours.
 
 ## Build and check
 
 Requirements: GCC with C99 support, Bash, AWK and standard GNU command-line
 utilities. Gnuplot with pngcairo is required only for rendering figures.
-No Python dependency is introduced.
+No Python dependency is introduced. Native setup commands for Linux and Windows
+are provided in [Reproducibility](docs/reproducibility.md).
 
 From the repository root:
 
@@ -64,8 +80,8 @@ The sweep writes `asymdrug.txt`, `extinction.txt` and
 - [Sweep findings](docs/results-sweep.md)
 - [Reversal findings](docs/results-reversal-summary.md)
 
-Existing figures are diagnostic audit plots. Paper-style versions will be
-added separately without changing the scientific calculations. Reported
+Diagnostic audit plots and paper-style figures are both included. Their
+presentation differs without changing the scientific calculations. Reported
 findings are based on seed 1; they do not establish robustness across seeds
 or exact reconstruction of every published figure.
 
@@ -80,3 +96,16 @@ verified result tables without rerunning simulations. See
 [figure definitions and verification status](docs/paper-style-figures.md).
 The plots use paper-style presentation of identified rerun data, not the
 original published images. Inspect generated outputs before publication.
+
+## Docker quick start
+
+```bash
+docker build -t amr-repro .
+docker run --rm amr-repro
+docker run --rm amr-repro bash scripts/check-historical.sh
+docker run --rm amr-repro bash scripts/check-released-results.sh
+```
+
+These run short checks, not full production experiments. See
+[Reproducibility](docs/reproducibility.md) for rendering, retrieving outputs
+and running recorded experiments through either route.
