@@ -1,0 +1,4 @@
+# Compiled programs and object files
+build/
+*.exe
+*.o

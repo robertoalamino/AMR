@@ -1,0 +1,11 @@
+* text=auto
+*.c text eol=lf
+*.h text eol=lf
+*.sh text eol=lf
+*.gp text eol=lf
+*.md text eol=lf
+*.png binary
+.gitattributes text eol=lf
+*.sha256 text eol=lf
+historical/src/** whitespace=-blank-at-eol
+tests/reference/**/*.txt whitespace=-blank-at-eol
