@@ -36,7 +36,7 @@ The corrected suite and historical regression checks pass on Linux
 with GCC 14.2; the development workflow has also been exercised on Windows
 with Git Bash and MSYS2. Container and plotting verification are pending.
 
-## Figure reproduction
+## Figure Reproduction
 
 Existing PNGs can be viewed, and compact numerical figure inputs are now
 included under `results/`. Run `bash scripts/check-released-results.sh` to
@@ -49,3 +49,42 @@ The paper-style generation command is now available:
 Actual rendering and visual inspection remain required before release. No private files are
 required by the code or test workflow. The public archived-data evidence
 extract and the full-result archive must be completed before release.
+
+## Optional Docker Environment
+
+Native execution remains supported. Docker is an alternative that packages the compiler, analysis utilities, Gnuplot and fonts.
+
+Docker must be installed and its engine running. From the repository root:
+
+```bash
+docker build -t amr-repro .
+docker run --rm amr-repro
+docker run --rm amr-repro bash scripts/check-historical.sh
+docker run --rm amr-repro bash scripts/check-released-results.sh
+```
+
+The default command runs the short corrected-implementation checks. These commands do not rerun the full production experiments.
+
+To regenerate figures from the included result tables:
+
+```bash
+docker run --name amr-render amr-repro bash scripts/render-paper-figures.sh
+mkdir -p build/paper-figures-docker
+docker cp amr-render:/amr/build/paper-figures/. ./build/paper-figures-docker/
+docker rm amr-render
+```
+
+In Windows Git Bash, prefix the `docker cp` command with
+`MSYS_NO_PATHCONV=1` to prevent conversion of the container's Linux path.
+
+The image contains a copy of the repository taken during the build.
+Rebuild after changing source files or plotting scripts.
+
+The Debian base image is pinned by digest. Additional packages come from
+maintained Debian repositories, so their versions may change between builds.
+This configuration passed the corrected checks, historical regressions and
+released-result checks on Linux/amd64 through Docker Desktop with WSL 2.
+Representative PNGs from each paper-style plot layout were visually inspected.
+
+These checks do not establish identical full-production trajectories across
+all operating systems and processor architectures.

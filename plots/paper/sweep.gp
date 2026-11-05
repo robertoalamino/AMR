@@ -28,7 +28,7 @@ set surface explicit
 set title sprintf("%s sweep: paper-style view", implementation eq "corrected" ? "Corrected" : "Historical baseline")
 set xlabel "{/Symbol a}"
 set ylabel "{/Symbol b}"
-set cblabel "Mean final q"
+set cblabel "Mean final q" offset 2,0
 set xrange [-1:1]
 set yrange [-1:1]
 set xtics 0.5

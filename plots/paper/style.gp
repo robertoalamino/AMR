@@ -1,10 +1,10 @@
 # Shared paper-style rendering. The calling script sets width and height.
 # The caller captures output_file and output_format before loading this file.
 if (output_format eq "png") {
-    set terminal pngcairo size image_width,image_height enhanced font "serif,14"
+    set terminal pngcairo size image_width,image_height enhanced font "Liberation Serif,14"
 } else {
     if (output_format eq "svg") {
-        set terminal svg size image_width,image_height enhanced font "serif,14"
+        set terminal svg size image_width,image_height enhanced font "Liberation Serif,14"
     } else {
         print "Expected png or svg output format"
         exit error "Invalid output format"
