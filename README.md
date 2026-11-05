@@ -5,9 +5,10 @@ model for the emergence of anti-microbial resistance*, Journal of
 Theoretical Biology 486, 110080.
 https://doi.org/10.1016/j.jtbi.2019.110080
 
-**Release candidate, stage 2: numerical data.** The scientific implementations are frozen
+**Release candidate, stage 3: paper-style plotting.** The scientific implementations are frozen
 for release preparation. Compact figure inputs and data checks are included.
-Paper-style plots, container verification and licensing review remain pending.
+Paper-style plotting scripts are included; rendering verification, container
+verification and licensing review remain pending.
 Do not describe this candidate as a finished reproducibility release.
 
 ## Build and check
@@ -67,3 +68,15 @@ Existing figures are diagnostic audit plots. Paper-style versions will be
 added separately without changing the scientific calculations. Reported
 findings are based on seed 1; they do not establish robustness across seeds
 or exact reconstruction of every published figure.
+
+## Paper-style figures
+
+```bash
+bash scripts/render-paper-figures.sh
+```
+
+This generates PNG and SVG versions under `build/paper-figures/`, using
+verified result tables without rerunning simulations. See
+[figure definitions and verification status](docs/paper-style-figures.md).
+The plots use paper-style presentation of identified rerun data, not the
+original published images. Inspect generated outputs before publication.

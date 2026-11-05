@@ -43,6 +43,9 @@ included under `results/`. Run `bash scripts/check-released-results.sh` to
 verify them and regenerate histograms and the sweep summary. Full reversal
 trajectories are not included, so trajectory summaries and historical
 final-outcome reports are not independently reconstructed by this command.
-A one-command Gnuplot figure workflow remains to be added. No private files are
+The paper-style generation command is now available:
+`bash scripts/render-paper-figures.sh`. See
+[figure definitions and rendering status](paper-style-figures.md).
+Actual rendering and visual inspection remain required before release. No private files are
 required by the code or test workflow. The public archived-data evidence
 extract and the full-result archive must be completed before release.
