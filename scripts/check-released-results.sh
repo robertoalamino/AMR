@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-(cd results && sha256sum -c checksums.sha256)
+(cd results && sha256sum --strict -c checksums.sha256)
 mkdir -p build
 check_dir=$(mktemp -d "$PWD/build/released-results.XXXXXX")
 trap 'rm -rf -- "$check_dir"' EXIT
