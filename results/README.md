@@ -1,30 +1,15 @@
-# Numerical inputs and recorded results
+# Numerical Inputs and Recorded Results
 
-These are data from the completed seed-1 experiments, not new simulations
-of the release candidate. Original source revision identifiers are recorded
-in the portable provenance files. They identify research revisions and may
-not be reachable in the release repository's clean history.
+These are data from the completed seed-1 experiments, not new simulations of the release repository. Original source revision identifiers are recorded in the portable provenance files. They identify research revisions and may not be reachable in the release repository's clean history.
 
 ## Contents
 
-- `sweep/`: historical and corrected aggregate outputs (no header), corrected
-  individual outcomes and extinction records (no header), the corrected
-  summary, the aggregate comparison and a descriptive difference report.
-- `reversal/{500,1000,2500,5000}/`: corrected summary trajectories, historical
-  mean trajectories, corrected snapshots and histograms for the last treated
-  step, first untreated step and final step, corrected extinction records,
-  and the recorded crossing-time and final-comparison reports.
-- Per-setting `provenance/`: source revision identifiers, arguments, compiler
-  details, run dates and original output checksum records without personal
-  paths. Reversal provenance also preserves the original crossing-analysis
-  script and raw input identities where recorded.
+- `sweep/`: historical and corrected aggregate outputs (no header), corrected individual outcomes and extinction records (no header), the corrected summary, the aggregate comparison and a descriptive difference report.
+- `reversal/{500,1000,2500,5000}/`: corrected summary trajectories, historical mean trajectories, corrected snapshots and histograms for the last treated step, first untreated step and final step, corrected extinction records, and the recorded crossing-time and final-comparison reports.
+- Per-setting `provenance/`: source revision identifiers, arguments, compiler details, run dates and original output checksum records without personal paths. Reversal provenance also preserves the original crossing-analysis script and raw input identities where recorded.
 - `checksums.sha256`: checksums for the files included under `results/`.
 
-The corrected mean trajectory is column `historical_style_mean` in each
-`corrected-summary.tsv`; it includes carried observations. It was verified
-against the separately supplied corrected mean table before import, so that
-redundant table is not duplicated here. Snapshot and histogram filenames
-express their observation role; the snapshot's step column gives its time.
+The corrected mean trajectory is column `historical_style_mean` in each `corrected-summary.tsv`; it includes carried observations. It was verified against the separately supplied corrected mean table before import, so that redundant table is not duplicated here. Snapshot and histogram filenames express their observation role; the snapshot's step column gives its time.
 
 ## Verification and regeneration
 
@@ -67,12 +52,9 @@ for verifying this directory. Some included originals have been normalised
 to LF text endings, so their original Windows byte hashes may also differ.
 Use `checksums.sha256` for the released copies.
 
-These data are simulation reruns. They are not the private historical
-workbook observations used to assess the paper's histogram analysis.
-A separate reviewed evidence extract for that claim remains a release gate.
-One seed per setting does not establish robustness across seeds. Different
-implementations consume random streams differently, so matching seeds do
-not create paired realisations.
+The [archived reversal snapshot extract](../evidence/amr-archived-evidence/README.md) contains the observations used to recalculate the paper’s reported thresholds. It is separate from the simulation reruns in this directory.
+
+The complete outputs from the eight production reversal runs are packaged separately for distribution as a GitHub Release attachment, alongside a SHA-256 checksum. The compact tables in this directory are sufficient to regenerate the included figures without downloading that archive.
 
 Paper-style figures can be regenerated without rerunning simulations:
 
