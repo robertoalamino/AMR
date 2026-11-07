@@ -110,7 +110,18 @@ The paper-style generation command is now available:
 [figure definitions and rendering status](paper-style-figures.md).
 Native Windows rendering and representative Docker/Linux PNG layouts have
 been visually inspected. SVG files are generated but have not received the
-same visual verification. No private files are required by the code or test workflow. The [archived snapshot evidence](../evidence/amr-archived-evidence/README.md) is included in this repository. The full reversal trajectories are packaged separately for the GitHub Release. They are needed to recalculate trajectory summaries and final-outcome comparisons from individual simulation outputs.
+same visual verification. No private files are required by the code or test workflow. The [archived snapshot evidence](../evidence/amr-archived-evidence/README.md) is included in this repository. 
+
+Download the [full reversal trajectories](https://github.com/robertoalamino/AMR/releases/download/reproducibility-v1.0.0/amr-full-reversal.nOR3Ze.tar.gz) and the
+[SHA-256 checksum](https://github.com/robertoalamino/AMR/releases/download/reproducibility-v1.0.0/amr-full-reversal.nOR3Ze.tar.gz.sha256) from the `reproducibility-v1.0.0` release.
+Save both files in the same directory and verify the archive before extracting it:
+
+```bash
+sha256sum -c amr-full-reversal.nOR3Ze.tar.gz.sha256
+```
+
+The archive contains the individual simulation outputs needed to recalculate
+trajectory summaries and final-outcome comparisons.
 
 ## Optional Docker Environment
 
